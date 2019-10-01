@@ -154,9 +154,9 @@ def menu():
         z = json.loads(links.text)
         try:
             mail = z['email']
-            yahoo = re.compile('@.*')
-            otw = yahoo.search(mail).group()
-            if 'yahoo.com' in otw:
+            aol = re.compile('@.*')
+            otw = aol.search(mail).group()
+            if 'aol.com' in otw:
                 br.open('https://login.aol.com/config/login?.src=fpctx&.intl=id&.lang=id-ID&.done=https://id.aol.com')
                 br._factory.is_html = True
                 br.select_form(nr=0)
